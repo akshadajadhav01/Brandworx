@@ -1,0 +1,23 @@
+<svg width="58" height="57" viewBox="0 0 58 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_2_1055)">
+<rect x="5.71016" y="4.81616" width="45.9" height="45" rx="8.43944" transform="rotate(-0.127773 5.71016 4.81616)" fill="#001F33" fill-opacity="0.2" shape-rendering="crispEdges"/>
+<path d="M14.1078 18.8373L28.7117 27.2706L28.7477 43.4325L14.1444 35.2558L14.1078 18.8373Z" fill="url(#paint0_linear_2_1055)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M29.9987 27.2564L30.0299 41.2453L42.026 34.458L41.9943 20.2578L29.9987 27.2564ZM43.3145 35.1908L28.7478 43.4325L28.7118 27.2706L14.1079 18.8373L28.6758 11.1086L43.2779 18.7723L43.3145 35.1908ZM41.3172 19.1796L28.679 12.5467L16.7335 18.8841L29.343 26.1657L41.3172 19.1796Z" fill="white"/>
+</g>
+<defs>
+<filter id="filter0_d_2_1055" x="0.172003" y="0.560189" width="57.0766" height="56.1785" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="1.38454"/>
+<feGaussianBlur stdDeviation="2.76908"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_1055"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_1055" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_2_1055" x1="21.4509" y1="41.4911" x2="7.71293" y2="25.1767" gradientUnits="userSpaceOnUse">
+<stop stop-color="#999999"/>
+<stop offset="1" stop-color="#F2FF00"/>
+</linearGradient>
+</defs>
+</svg>
