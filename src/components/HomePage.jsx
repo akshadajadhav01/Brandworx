@@ -5,7 +5,7 @@ import { Box, Button, Typography } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import TwitterIcon from "@mui/icons-material/Twitter";
-import LinkedinIcon from "@mui/icons-material/Linkedin";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import OutboundOutlinedIcon from "@mui/icons-material/OutboundOutlined";
 
 // components
@@ -51,7 +51,7 @@ const HomePage = () => {
           >
             <InstagramIcon />
             <WhatsAppIcon />
-            <LinkedinIcon />
+            <LinkedInIcon />
             <TwitterIcon />
           </Button>
 
