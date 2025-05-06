@@ -24,6 +24,7 @@ const HomePage = () => {
           backgroundImage: "url(/bg.svg)",
           backgroundSize: "cover",
           bgcolor: "#0d0c1d",
+          minWidth: "100vw",
         }}
       >
         <Header />

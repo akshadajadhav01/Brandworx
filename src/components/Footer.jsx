@@ -47,8 +47,8 @@ const Footer = () => {
         <Box display={"flex"} flexDirection={"column"}>
           {" "}
           <Typography variant="h5" maxWidth={"300px"}>
-            2nd Floor, Shree Complex Plot No. 42, Sector 18 Koramangala,
-            Bengaluru - 560095 Karnataka, India
+            2nd Floor, Shree ComplexPlot No. 42, Sector 18Koramangala, Bengaluru
+            - 560095Karnataka, India
           </Typography>
           <Typography variant="body2" mt={1.5}>
             +91-9876543210
