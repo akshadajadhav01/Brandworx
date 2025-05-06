@@ -105,7 +105,7 @@ const Projects = () => {
 
         <Grid container spacing={2}>
           {projects?.map((project, index) => (
-            <Grid item xs={12} sm={6} lg={6} key={index} pl={5}>
+            <Grid item xs={12} sm={6} lg={6} md={12} key={index} pl={5}>
               <Card
                 elevation={0}
                 sx={{
@@ -201,7 +201,7 @@ const Projects = () => {
           </Typography>{" "}
           <Grid container spacing={2} mt={5}>
             {cards?.map((card, index) => (
-              <Grid item xs={12} sm={6} lg={6} key={index}>
+              <Grid item xs={12} sm={6} lg={6} md={12} key={index}>
                 <Card
                   elevation={0}
                   sx={{
