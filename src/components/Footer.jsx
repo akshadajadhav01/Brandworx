@@ -42,7 +42,7 @@ const Footer = () => {
       </Box>
       <Divider sx={{ borderColor: "#635189" }} />
 
-      <Box pl={20} mt={14} display={"flex"} gap={7}>
+      <Box sx={{ pl: { lg: 20, md: 7 } }} mt={14} display={"flex"} gap={7}>
         <Box component="img" src="/footer.svg" alt="footer" />
         <Box display={"flex"} flexDirection={"column"}>
           {" "}
@@ -86,7 +86,7 @@ const Footer = () => {
           </Link>
         </Box>
 
-        <Box component="img" src="/Arow.svg" alt="Arow" ml={10} />
+        <Box component="img" src="/Arow.svg" alt="Arow" ml={7} />
       </Box>
       <Box display="flex" justifyContent="center" mt={4}>
         <Typography variant="body2" align="center">

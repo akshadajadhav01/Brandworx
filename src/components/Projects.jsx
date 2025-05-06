@@ -1,6 +1,14 @@
 import React from "react";
 // third-party
-import { Box, Typography, Chip, Grid, Card, CardContent } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Chip,
+  Grid,
+  Card,
+  CardContent,
+  Stack,
+} from "@mui/material";
 import OutboundOutlinedIcon from "@mui/icons-material/OutboundOutlined";
 
 // components
@@ -33,7 +41,12 @@ const Projects = () => {
               zIndex: 0,
             }}
           />{" "}
-          <Box position="relative" width="100%" height={200} mt={6}>
+          <Box
+            position="relative"
+            width="100%"
+            height={200}
+            sx={{ mt: { lg: 6, md: 1 } }}
+          >
             <Box
               bgcolor="#120F79"
               width="100%"
@@ -44,9 +57,9 @@ const Projects = () => {
               sx={{
                 transform: "rotate(3deg)",
                 zIndex: 2,
+                gap: { lg: 12, md: 5 },
               }}
               display={"flex"}
-              gap={12}
               p={4}
             >
               <Typography>MStore.id</Typography>
@@ -71,7 +84,14 @@ const Projects = () => {
               }}
             />
           </Box>
-          <Box sx={{ position: "relative", zIndex: 1, pt: "100px", pl: 5 }}>
+          <Box
+            sx={{
+              position: "relative",
+              zIndex: 1,
+              pt: { lg: "100px", md: "10px" },
+              pl: 5,
+            }}
+          >
             {" "}
             <Typography
               variant="h3"
@@ -94,7 +114,7 @@ const Projects = () => {
             sx={{
               display: "flex",
               justifyContent: "flex-end",
-              mr: { xs: 2, lg: 6 },
+              mr: { xs: 2, lg: 6, md: 4 },
             }}
           >
             <CustomButton endIcon={<OutboundOutlinedIcon />}>
@@ -102,65 +122,71 @@ const Projects = () => {
             </CustomButton>
           </Box>
         </Box>
-
-        <Grid container spacing={2}>
+        <Stack direction="row" spacing={2} flexWrap="wrap" useFlexGap>
           {projects?.map((project, index) => (
-            <Grid item xs={12} sm={6} lg={6} md={12} key={index} pl={5}>
+            <Box
+              key={index}
+              sx={{
+                width: {
+                  xs: "100%",
+                  md: "48%",
+                },
+              }}
+            >
               <Card
                 elevation={0}
                 sx={{
                   cursor: "pointer",
-                  width: "auto",
                   borderRadius: 5,
-                  pl: 1.5,
                   bgcolor: "#D8D7FF",
-                  zIndex: 1,
+                  width: "100%",
                 }}
               >
                 <CardContent>
-                  <Box display="flex" flexDirection="row" gap={1} mt={0.5}>
-                    <Box
-                      display="flex"
-                      flexDirection="column"
-                      gap={1}
-                      mt={0.5}
-                      alignItems="flex-start"
-                    >
+                  <Stack
+                    direction={{ xs: "column", md: "row" }}
+                    spacing={2}
+                    alignItems="flex-start"
+                    sx={{ width: "100%" }}
+                  >
+                    <Box flex={1}>
                       <Chip
                         label={project.category}
                         variant="outlined"
-                        sx={{
-                          borderColor: "#854CFF",
-                          mb: 1,
-                        }}
+                        sx={{ borderColor: "#854CFF", mb: 1 }}
                       />
                       <Typography variant="h4">{project.title}</Typography>
-                      <Typography variant="subtitle1" maxWidth={300}>
+                      <Typography variant="subtitle1" sx={{ mt: 1 }}>
                         {project.description}
                       </Typography>
                     </Box>
-                    <Box display={"flex"} justifyContent={"flex-end"}>
-                      {" "}
+
+                    <Box flexShrink={0}>
                       <Box
                         component="img"
                         src={project.image}
                         alt="Image"
-                        sx={{ width: 300, height: 200, pb: 0 }}
+                        sx={{
+                          width: { xs: "100%", md: 140, lg: 300 },
+                          height: { xs: "auto", md: 100, lg: 200 },
+                          borderRadius: 2,
+                          objectFit: "cover",
+                        }}
                       />
                     </Box>
-                  </Box>
+                  </Stack>
                 </CardContent>
               </Card>
+
               <Box mt={2}>
-                {" "}
                 <Typography variant="h4">{project.title}</Typography>
-                <Typography variant="subtitle1" mt={2} maxWidth={550}>
+                <Typography variant="subtitle1" mt={1} maxWidth={550}>
                   {project.description}
                 </Typography>
               </Box>
-            </Grid>
+            </Box>
           ))}
-        </Grid>
+        </Stack>
         <Box
           sx={{
             position: "relative",
@@ -180,6 +206,10 @@ const Projects = () => {
               transform: "translateX(-50%)",
               zIndex: 0,
               width: "100%",
+              "@media (max-width: 1024px)": {
+                top: -190,
+                bottom: "auto",
+              },
             }}
           />
         </Box>
@@ -191,7 +221,7 @@ const Projects = () => {
                 "linear-gradient(to right, #9795FF, #FFFFFF, #FFFFFF, #BE9FFF)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
-              mt: 2,
+              mt: { lg: 2 },
             }}
           >
             What They Say About Us
@@ -199,14 +229,14 @@ const Projects = () => {
           <Typography variant="h6" sx={{ mt: 1 }}>
             Here form their Point Of View
           </Typography>{" "}
-          <Grid container spacing={2} mt={5}>
+          <Grid container spacing={2} sx={{ mt: { lg: 5, md: 3 } }}>
             {cards?.map((card, index) => (
-              <Grid item xs={12} sm={6} lg={6} md={12} key={index}>
+              <Grid item xs={12} sm={4} lg={4} md={4} key={index}>
                 <Card
                   elevation={0}
                   sx={{
                     cursor: "pointer",
-                    width: "auto",
+                    width: "100%",
                     borderRadius: 6,
                     pl: 2,
                     bgcolor: "rgba(21, 21, 21, 0.4)",
@@ -264,7 +294,7 @@ const Projects = () => {
               </Grid>
             ))}
           </Grid>
-        </Box>
+        </Box>{" "}
       </Box>
     </>
   );

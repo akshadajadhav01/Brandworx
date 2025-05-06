@@ -2,6 +2,7 @@ import React from "react";
 
 // third-party
 import { Box, Typography, Card, CardContent, Link } from "@mui/material";
+import Grid from "@mui/material/Grid";
 import NorthEastOutlinedIcon from "@mui/icons-material/NorthEastOutlined";
 import FlashOnIcon from "@mui/icons-material/FlashOn";
 import OutboundOutlinedIcon from "@mui/icons-material/OutboundOutlined";
@@ -38,14 +39,21 @@ const About = () => {
           alt="rings"
           sx={{
             position: "absolute",
-            top: 220,
+            top: { lg: 220, sm: 130, md: 130 },
             right: 130,
             width: 150,
             height: 150,
             zIndex: 2,
           }}
         />
-        <Box sx={{ position: "relative", zIndex: 2, maxWidth: "800px", mt: 7 }}>
+        <Box
+          sx={{
+            position: "relative",
+            zIndex: 2,
+            maxWidth: "800px",
+            mt: { lg: 7, sm: 0, md: 0 },
+          }}
+        >
           <Typography
             variant="h3"
             sx={{
@@ -53,7 +61,7 @@ const About = () => {
                 "linear-gradient(to right, #9795FF, #FFFFFF, #FFFFFF, #BE9FFF)",
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
-              mb: 2,
+              mb: { lg: 2, sm: 1, md: 0.5 },
             }}
           >
             Agency That Can Help You Grow Your Business Digitally
@@ -64,7 +72,7 @@ const About = () => {
           </Typography>
         </Box>
       </Box>
-      <Box mt={10} position="relative" pl={7} pt={4}>
+      <Box mt={4} position="relative" pl={7} pt={4}>
         <Typography
           variant="h3"
           sx={{
@@ -85,238 +93,262 @@ const About = () => {
         <Box />
       </Box>
 
-      <Box mt={5} display="flex" gap={4} flexWrap="wrap" pl={8}>
-        <Card
-          sx={{
-            width: 700,
-            background: "linear-gradient(120deg, #14117B, #5754B7)",
-            color: "white",
-            borderRadius: 4,
-            p: 3,
-            opacity: 0.7,
-          }}
-        >
-          <CardContent>
-            <Box sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
-              <Box>
-                <Box component="img" src="/web.svg" alt="web" />
-                <Typography variant="h6">Website Design</Typography>
-                <Typography variant="body2" maxWidth="250px" mt={1}>
-                  Our Website Design Service Transforms Your Ideas Into Visually
-                  Stunning, User-Friendly Websites That Engage Visitors And
-                  Drive Results.
-                </Typography>
-                <Link
-                  variant="body2"
-                  sx={{
-                    mt: 3,
-                    color: "white",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "4px",
-                    cursor: "pointer",
-                  }}
-                >
-                  Start With Us
-                  <NorthEastOutlinedIcon fontSize="small" />
-                </Link>
-              </Box>
-
-              <Box
-                component="img"
-                src="/card1img.svg"
-                alt="card1img"
-                sx={{
-                  ml: "auto",
-                  alignSelf: "flex-end",
-                  height: 200,
-                  width: 300,
-                }}
-              />
-            </Box>
-          </CardContent>
-        </Card>
-        <Card
-          sx={{
-            width: 500,
-            background: "linear-gradient(135deg, #5754B7, #14117B)",
-            color: "white",
-            borderRadius: 4,
-            p: 3,
-            opacity: 0.7,
-          }}
-        >
-          <CardContent>
-            <Box sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
-              <Box>
-                <Box component="img" src="/branding.svg" alt="branding" />
-                <Typography variant="h6">Branding</Typography>
-                <Typography variant="body2" maxWidth="240px" mt={1}>
-                  We Build Distinctive Brands That Resonate With Your Audience,
-                  Ensuring You Stand Out In The Market.
-                </Typography>
-                <Link
-                  variant="body2"
-                  sx={{
-                    mt: 3,
-                    color: "white",
-                    display: "inline-flex",
-                    alignItems: "center",
-                    gap: "4px",
-                    cursor: "pointer",
-                  }}
-                >
-                  Start With Us
-                  <NorthEastOutlinedIcon fontSize="small" />
-                </Link>
-              </Box>
-              <Box
-                component="img"
-                src="/card2img.svg"
-                alt="card1img"
-                sx={{
-                  ml: "auto",
-                  alignSelf: "flex-end",
-                  height: 200,
-                  width: 300,
-                }}
-              />
-            </Box>
-          </CardContent>
-        </Card>
-
-        <Card
-          sx={{
-            width: 1240,
-            background: "linear-gradient(135deg, #5754B7, #14117B)",
-            color: "white",
-            borderRadius: 4,
-            opacity: 0.7,
-            p: 3,
-          }}
-        >
-          <CardContent
+      {/* <Box mt={5} display="flex" gap={4} pl={8}> */}
+      <Grid container spacing={4} mt={5} display="flex" pl={8}>
+        {/* Card 1 */}
+        <Grid sx={{ xs: 6, sm: 6, md: 6 }}>
+          <Card
             sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "flex-start",
-              flexWrap: "wrap",
+              width: "100%",
+              background: "linear-gradient(120deg, #14117B, #5754B7)",
+              color: "white",
+              borderRadius: 4,
+              p: 3,
+              opacity: 0.7,
             }}
           >
-            <Box>
-              <Typography variant="h6">Digital Marketing</Typography>
-              <Typography variant="body2" maxWidth="400px" mt={1}>
-                Grow your brand online with our digital marketing services.
-                We’ll help you reach more people, boost engagement, and see real
-                results. Let's make your business stand out.
-              </Typography>
+            <CardContent>
+              <Box sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
+                <Box>
+                  <Box component="img" src="/web.svg" alt="web" />
+                  <Typography variant="h6">Website Design</Typography>
+                  <Typography variant="body2" maxWidth="250px" mt={1}>
+                    Our Website Design Service Transforms Your Ideas Into
+                    Visually Stunning, User-Friendly Websites That Engage
+                    Visitors And Drive Results.
+                  </Typography>
+                  <Link
+                    variant="body2"
+                    sx={{
+                      mt: 3,
+                      color: "white",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "4px",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Start With Us
+                    <NorthEastOutlinedIcon fontSize="small" />
+                  </Link>
+                </Box>
+
+                <Box
+                  component="img"
+                  src="/card1img.svg"
+                  alt="card1img"
+                  sx={{
+                    ml: "auto",
+                    alignSelf: "flex-end",
+                    height: 200,
+                    width: 300,
+                  }}
+                />
+              </Box>
+            </CardContent>
+          </Card>
+        </Grid>
+
+        {/* Card 2 */}
+        <Grid sx={{ xs: 12, sm: 6, md: 6 }}>
+          <Card
+            sx={{
+              width: "100%",
+              background: "linear-gradient(135deg, #5754B7, #14117B)",
+              color: "white",
+              borderRadius: 4,
+              p: 3,
+              opacity: 0.7,
+            }}
+          >
+            <CardContent>
+              <Box sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
+                <Box>
+                  <Box component="img" src="/branding.svg" alt="branding" />
+                  <Typography variant="h6">Branding</Typography>
+                  <Typography variant="body2" maxWidth="240px" mt={1}>
+                    We Build Distinctive Brands That Resonate With Your
+                    Audience, Ensuring You Stand Out In The Market.
+                  </Typography>
+                  <Link
+                    variant="body2"
+                    sx={{
+                      mt: 3,
+                      color: "white",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "4px",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Start With Us
+                    <NorthEastOutlinedIcon fontSize="small" />
+                  </Link>
+                </Box>
+                <Box
+                  component="img"
+                  src="/card2img.svg"
+                  alt="card2img"
+                  sx={{
+                    ml: "auto",
+                    alignSelf: "flex-end",
+                    height: 200,
+                    width: 300,
+                  }}
+                />
+              </Box>
+            </CardContent>
+          </Card>
+        </Grid>
+        <Grid sx={{ xs: 12, sm: 12, md: 12, lg: 12 }}>
+          <Card
+            sx={{
+              width: "100%",
+              background: "linear-gradient(135deg, #5754B7, #14117B)",
+              color: "white",
+              borderRadius: 4,
+              opacity: 0.7,
+              p: 3,
+            }}
+          >
+            <CardContent
+              sx={
+                {
+                  // display: "flex",
+                  // justifyContent: "space-between",
+                  //alignItems: "flex-start",
+                  //flexWrap: "wrap",
+                }
+              }
+            >
               <Box
                 sx={{
-                  mt: 2,
-                  color: "white",
-                  maxWidth: "350px",
+                  display: "flex",
+                  alignItems: "flex-start",
+                  gap: { lg: 10, md: 9 },
                 }}
               >
-                <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-                  <FlashOnIcon sx={{ color: "#FCEC3D", mr: 1 }} />
-                  <Typography variant="body2">
-                    Brand-Aligned, Compelling Design.
+                <Box>
+                  <Typography variant="h6">Digital Marketing</Typography>
+                  <Typography variant="body2" maxWidth="400px" mt={1}>
+                    Grow your brand online with our digital marketing services.
+                    We’ll help you reach more people, boost engagement, and see
+                    real results. Let's make your business stand out.
                   </Typography>
+                  <Box
+                    sx={{
+                      mt: 2,
+                      color: "white",
+                      maxWidth: "350px",
+                    }}
+                  >
+                    <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
+                      <FlashOnIcon sx={{ color: "#FCEC3D", mr: 1 }} />
+                      <Typography variant="body2">
+                        Brand-Aligned, Compelling Design.
+                      </Typography>
+                    </Box>
+                    <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
+                      <FlashOnIcon sx={{ color: "#FCEC3D", mr: 1 }} />
+                      <Typography variant="body2">
+                        Sleek, Minimalist Design Aesthetic.
+                      </Typography>
+                    </Box>
+                    <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
+                      <FlashOnIcon sx={{ color: "#FCEC3D", mr: 1 }} />
+                      <Typography variant="body2">
+                        Enterprise Friendly & Responsive Design.
+                      </Typography>
+                    </Box>
+                    <Box sx={{ display: "flex", alignItems: "center" }}>
+                      <FlashOnIcon sx={{ color: "#FCEC3D", mr: 1 }} />
+                      <Typography variant="body2">
+                        Resonates With Target Users.
+                      </Typography>
+                    </Box>
+                  </Box>
+                  <Link
+                    variant="body2"
+                    sx={{
+                      mt: 3,
+                      color: "white",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "4px",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Start With Us
+                    <NorthEastOutlinedIcon fontSize="small" />
+                  </Link>
                 </Box>
-                <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-                  <FlashOnIcon sx={{ color: "#FCEC3D", mr: 1 }} />
-                  <Typography variant="body2">
-                    Sleek, Minimalist Design Aesthetic.
-                  </Typography>
-                </Box>
-                <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
-                  <FlashOnIcon sx={{ color: "#FCEC3D", mr: 1 }} />
-                  <Typography variant="body2">
-                    Enterprise Friendly & Responsive Design.
-                  </Typography>
-                </Box>
-                <Box sx={{ display: "flex", alignItems: "center" }}>
-                  <FlashOnIcon sx={{ color: "#FCEC3D", mr: 1 }} />
-                  <Typography variant="body2">
-                    Resonates With Target Users.
-                  </Typography>
+                <Box
+                  position="relative"
+                  sx={{ ml: "auto", alignSelf: "flex-end" }}
+                >
+                  <Box
+                    component="img"
+                    src="/main.png"
+                    alt="main"
+                    position={"relative"}
+                    sx={{ height: 300 }}
+                  />
+                  <Box
+                    component="img"
+                    src="/sidebar.png"
+                    alt="sidebar"
+                    sx={{
+                      position: "absolute",
+                      top: 5,
+                      right: 0,
+                      width: 110,
+                      height: 300,
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    src="/box.png"
+                    alt="box"
+                    sx={{
+                      position: "absolute",
+                      top: 0,
+                      right: 140,
+                      width: 180,
+                      height: 200,
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    src="/bar.png"
+                    alt="bar"
+                    sx={{
+                      position: "absolute",
+                      top: 50,
+                      right: 275,
+                      width: 200,
+                      height: 74,
+                    }}
+                  />
+                  <Box
+                    component="img"
+                    src="/symbol.png"
+                    alt="symbol"
+                    sx={{
+                      position: "absolute",
+                      top: 100,
+                      right: 275,
+                      width: 200,
+                      height: 200,
+                    }}
+                  />
                 </Box>
               </Box>
-              <Link
-                variant="body2"
-                sx={{
-                  mt: 3,
-                  color: "white",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "4px",
-                  cursor: "pointer",
-                }}
-              >
-                Start With Us
-                <NorthEastOutlinedIcon fontSize="small" />
-              </Link>
-            </Box>
-            <Box position="relative">
-              <Box
-                component="img"
-                src="/main.png"
-                alt="main"
-                position={"relative"}
-                sx={{ height: 300 }}
-              />
-              <Box
-                component="img"
-                src="/sidebar.png"
-                alt="sidebar"
-                sx={{
-                  position: "absolute",
-                  top: 5,
-                  right: 0,
-                  width: 110,
-                  height: 300,
-                }}
-              />
-              <Box
-                component="img"
-                src="/box.png"
-                alt="box"
-                sx={{
-                  position: "absolute",
-                  top: 0,
-                  right: 140,
-                  width: 180,
-                  height: 200,
-                }}
-              />
-              <Box
-                component="img"
-                src="/bar.png"
-                alt="bar"
-                sx={{
-                  position: "absolute",
-                  top: 50,
-                  right: 275,
-                  width: 200,
-                  height: 74,
-                }}
-              />
-              <Box
-                component="img"
-                src="/symbol.png"
-                alt="symbol"
-                sx={{
-                  position: "absolute",
-                  top: 100,
-                  right: 275,
-                  width: 200,
-                  height: 200,
-                }}
-              />
-            </Box>
-          </CardContent>
-        </Card>
-      </Box>
+            </CardContent>
+          </Card>
+        </Grid>
+      </Grid>
+
+      {/* </Box> */}
       <Box sx={{ display: "flex", justifyContent: "center", mt: 6 }}>
         <CustomButton endIcon={<OutboundOutlinedIcon />}>
           Explore All services

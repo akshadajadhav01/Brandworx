@@ -1,4 +1,5 @@
 import { CssBaseline } from "@mui/material";
+import "./App.css";
 import HomePage from "./components/HomePage";
 
 function App() {

@@ -65,7 +65,7 @@ const HomePage = () => {
               WebkitTextFillColor: "transparent",
               color: "#fff",
               mt: 1,
-              maxWidth: "1100px",
+              maxWidth: { lg: "1100px", md: "1500px", sm: "1500px" },
             }}
           >
             Amazing Digital creations with Brandworx agency
