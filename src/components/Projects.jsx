@@ -229,9 +229,24 @@ const Projects = () => {
           <Typography variant="h6" sx={{ mt: 1 }}>
             Here form their Point Of View
           </Typography>{" "}
-          <Grid container spacing={2} sx={{ mt: { lg: 5, md: 3 } }}>
+          <Stack
+            direction="row"
+            flexWrap="wrap"
+            spacing={2}
+            sx={{ mt: { lg: 5, md: 3 } }}
+          >
             {cards?.map((card, index) => (
-              <Grid item xs={12} sm={4} lg={4} md={4} key={index}>
+              <Box
+                key={index}
+                sx={{
+                  flex: {
+                    xs: "1 1 100%",
+                    md: "1 1 48%",
+                    lg: "1 1 31%",
+                  },
+                  minWidth: { sm: "250px" },
+                }}
+              >
                 <Card
                   elevation={0}
                   sx={{
@@ -240,7 +255,6 @@ const Projects = () => {
                     borderRadius: 6,
                     pl: 2,
                     bgcolor: "rgba(21, 21, 21, 0.4)",
-
                     color: "white",
                     backdropFilter: "blur(20px)",
                   }}
@@ -255,7 +269,6 @@ const Projects = () => {
                         alignItems="flex-start"
                       >
                         <Box display="flex" flexDirection="row" gap={3} mb={2}>
-                          {" "}
                           <Box
                             component="img"
                             src={card.image}
@@ -280,7 +293,6 @@ const Projects = () => {
                         </Typography>
                       </Box>
                       <Box display={"flex"} justifyContent={"flex-end"}>
-                        {" "}
                         <Box
                           component="img"
                           src={card.comma}
@@ -291,9 +303,9 @@ const Projects = () => {
                     </Box>
                   </CardContent>
                 </Card>
-              </Grid>
+              </Box>
             ))}
-          </Grid>
+          </Stack>
         </Box>{" "}
       </Box>
     </>
